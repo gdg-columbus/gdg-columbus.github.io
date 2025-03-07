@@ -1,3 +1,94 @@
-<HTML>
-    HELLO JimAndI.love
-</HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JimAndI.love</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    /* Large center image for the main logo */
+    .jimandi-logo {
+      display: block;
+      margin: 50px auto 20px;
+      width: 60%;
+      max-width: 800px;
+    }
+    /* Medium center image for the Gemini logo */
+    .gemini-logo {
+      display: block;
+      margin: 20px auto;
+      width: 30%;
+      max-width: 500px;
+    }
+    .gemini-love {
+      font-size: 4em;
+      position: relative;
+      text-decoration: none;
+    }
+    /* Container around the heart to position the animated label */
+    .gemini-love-container {
+      display: inline-block;
+      position: relative;
+    }
+    /* "Click Here" styling */
+    .click-here {
+      display: inline-block;
+      position: absolute;
+      top: -2.2em;       /* Adjust vertical position above the heart */
+      left: 50%;
+      transform: translateX(-50%);
+      background: #e74c3c;
+      color: #fff;
+      font-weight: bold;
+      padding: 0.3em 0.6em;
+      border-radius: 0.4em;
+      font-size: 0.9em;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+      animation: bounce 1s infinite;
+      z-index: 2;
+      text-decoration: none;
+    }
+    /* Bouncing animation */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, 0);
+      }
+      40% {
+        transform: translate(-50%, -10px);
+      }
+      60% {
+        transform: translate(-50%, -5px);
+      }
+    }
+    /* Optional arrow pointing down from "Click Here" */
+    .click-here::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <img src="jimandi_logo_transparent.png" alt="JimAndI Logo" class="jimandi-logo">
+
+  <!-- Heart with a "Click Here" label above it, wrapped in a link -->
+  <div class="gemini-love-container">
+    <a href="https://gemini.google.com/" target="_blank" class="click-here">Click Here</a>
+    <a href="https://gemini.google.com/" target="_blank" class="gemini-love">&#x2764;&#xfe0f;</a>
+  </div>
+
+  <img src="gemini_logo.webp" alt="Gemini Logo" class="gemini-logo">
+</body>
+</html>
